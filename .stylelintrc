@@ -1,4 +1,6 @@
 {
+  "plugins": ["stylelint-scss"],
+  "customSyntax": "postcss-scss",
   "extends": "stylelint-config-standard",
   "rules": {
     "string-quotes": null,
@@ -34,7 +36,8 @@
           "function",
           "use",
           "forward",
-          "layer"
+          "layer",
+          "svg-load"
         ]
       }
     ]

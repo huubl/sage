@@ -1,0 +1,23 @@
+//@import 'tailwindcss/base';
+//@import 'tailwindcss/components';
+//@import 'tailwindcss/utilities';
+
+@svg-load logo url('../images/logo-bud.svg') {
+  fill: #0f0;
+}
+
+body {
+  background: svg-inline(logo);
+
+  #app {
+    &::before {
+      display: inline-block;
+      width: 5rem;
+      height: 5rem;
+      background-color: #f00;
+      content: '';
+      mask: svg-load('../images/logo-bud.svg') no-repeat 50% 50%;
+      mask-size: cover;
+    }
+  }
+}
